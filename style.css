@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: inline-grid;
+    place-items: center;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+.simon{
+    position: relative;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10%;
+    color: #fff;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+        margin-bottom: 2em;
+}
+
+.buttonContainer{
+    display: inline-grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    transform: rotate(45deg);
+    margin-left: 7em;
+}
+
+
+
+#startButton {
+    width: 95px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0074D9;
+    padding: 5px;
+    border-radius: 0px 40px 0px 40px;
+    transition: all .3s ease-in-out;
+}
+
+
+#startButton:hover{
+    background-color: #3a99ec;
+}
+
+#startButton:disabled {
+    background-color: #3a99ec;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.square:active,
+.active{
+    filter: brightness(150%);
+    box-shadow:0 0 10px #FFF,0 0 20px #FFF,0 0 30px #FFF,0 0 40px
+}
+
+.green{
+    cursor: pointer;
+    z-index: 10;
+    
+    background-color: #2ECC40;
+}
+
+.red{
+    cursor: pointer;
+    z-index: 10;
+    
+    background: #FF4136;
+    
+}
+
+.yellow{
+    cursor: pointer;
+    z-index: 10;
+    
+    background: #FFDC00;
+}
+
+.blue{
+    cursor: pointer;
+    z-index: 10;
+    
+    background: #0074D9;
+    
+}
+
+#round{
+    position: absolute;
+    z-index: 30;
+    left: 4.4em;
+    top: 6.4em;
+    position: absolute;
+    background-color: #1B1A1A;
+    color: #fff;
+    font: 50px Concert One,Arial;
+    line-height: normal;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,.8);
+    font-weight: 600;
+}
+
+
+.lost, .winner {
+    animation: spin 1s ease-in-out;
+}
+
+@keyframes spin {
+    100% {transform: rotate(180deg);}
+}
